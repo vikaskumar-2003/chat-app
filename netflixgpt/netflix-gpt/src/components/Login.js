@@ -6,7 +6,7 @@ import { auth } from '../utils/firebase'
 import { useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { addUsers } from '../utils/userSlice'
-import { AVATAR_URL } from '../utils/constant'
+import { AVATAR_URL, BG_URL } from '../utils/constant'
 const Login = () => {
 
   const [isSignInForm, setIsSignInForm] = useState(true)
@@ -41,7 +41,7 @@ const Login = () => {
             }).catch((error) => {
             setErrorMessage(error.message)
        });
-        console.log(user);
+       
       
    
       })
@@ -58,7 +58,7 @@ const Login = () => {
           .then((userCredential) => {
         // Signed in 
         const user = userCredential.user;
-        console.log(user);
+       
        navigate("/browse")
     // ...
   })
@@ -81,7 +81,7 @@ const Login = () => {
           
           <Header />
           <div className='absolute' >
-              <img src='https://assets.nflxext.com/ffe/siteui/vlv3/8e4a7625-f942-48f5-a9b0-d470b772bc8c/web/IN-en-20251215-TRIFECTA-perspective_a8575e53-99ab-4f16-a2d6-c037acaf12a6_large.jpg' alt='background' />
+              <img src={BG_URL} alt='background' />
       </div>
       <form onSubmit={(e)=>e.preventDefault()} className=' w-3/12 absolute p-12 bg-black bg-opacity-70 mx-auto my-36 right-0 left-0 rounded-xl'>
         <h1 className='font-bold text-3xl py-4 text-white'>{isSignInForm ? "Sign In" : "Sign Up"}</h1>

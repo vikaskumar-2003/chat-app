@@ -6,8 +6,10 @@ export const API_OPTION={
   method: 'GET',
   headers: {
     accept: 'application/json',
-    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhNzgxYTdmYzA3ZDllYmM5YTM1YmIyZTE0ZGRjYWFiMSIsIm5iZiI6MTc1NTk5MTgzNy4xNzIsInN1YiI6IjY4YWE0ZjFkZTgxNjM2NDBiMzc4MWI0YSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.bqHUFZyRbIdNGPnxs5MmJJe9eT36uTksSgwwYVdkh30'
+    Authorization: 'Bearer '+ process.env.REACT_APP_MOVIE_KEY
   }
 };
 
-export const IMG_CDN="//image.tmdb.org/t/p/w500/"
+export const IMG_CDN = "//image.tmdb.org/t/p/w500/"
+
+export const BG_URL="https://assets.nflxext.com/ffe/siteui/vlv3/8e4a7625-f942-48f5-a9b0-d470b772bc8c/web/IN-en-20251215-TRIFECTA-perspective_a8575e53-99ab-4f16-a2d6-c037acaf12a6_large.jpg"
